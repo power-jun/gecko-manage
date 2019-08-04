@@ -83,7 +83,7 @@ export default {
     },
 
     async login () {
-      this.$store.dispatch('pickUserInfo', { token: 'dddd' })
+      sessionStorage.setItem('geckoToken', 'ddd')
       this.$router.push('/')
       try {
         await api.login({

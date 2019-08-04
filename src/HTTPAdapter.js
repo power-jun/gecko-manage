@@ -5,8 +5,7 @@ import store from './store'
 let myRequester = null
 let myResponser = null
 
-const token = store.state.user.userInfo.token
-
+const token = sessionStorage.getItem('geckoToken')
 if (token) {
   axios.defaults.headers.common['token'] = token
 }
